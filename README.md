@@ -1,6 +1,6 @@
 # CEAHD2021-5 database
 
-中国少数民族古籍文档分类
+中国少数民族古籍文档分类 是 中国少数民族古籍数字化平台 的重要组成部分，主要包括文档分类、图像处理、版面分析、内容识别及版面重建等。
 
 Chinese historical documents classification with deep convolutional neural networks via multi-branch and spatial pyramid pooling
 
