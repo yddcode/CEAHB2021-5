@@ -1,0 +1,1 @@
+mu_rep.py为MSVGG网络的训练主体代码。
