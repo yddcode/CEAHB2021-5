@@ -1,16 +1,16 @@
-# CEAHD2021-5 database
+# CEAHB2021-5 database
 
-中国少数民族古籍文档分类 是 中国少数民族古籍数字化平台 的重要组成部分，主要包括文档分类、图像处理、版面分析、内容识别及版面重建等。
+中国少数民族古籍文档文种分类 是 中国少数民族古籍数字化平台 的重要组成部分，该平台主要包括文档文种分类、图像处理、版面分析、内容识别及版面重建等。
 
-Chinese historical documents classification with deep convolutional neural networks via multi-branch and spatial pyramid pooling
+Chinese ancient books script identification with deep convolutional neural networks via multi-branch and spatial pyramid pooling
 
-dataset：Chinese Ethnic Ancient Handwritten Documents database, CEAHD2021-5
+dataset：Chinese Ethnic Ancient Handwritten Books database, CEAHD2021-5
 
 E.g.:
 
-![image](https://github.com/yddcode/CNAHD2021-5/blob/main/img/20210328093743.png)
+![image](https://github.com/yddcode/CNAHB2021-5/blob/main/img/20210328093743.png)
 
-Dataset will be published at Baidu Drive and Google Drive.
+The dataset was published at Baidu Drive and Google Drive.
 
 Baidu Drive ![link] (https://pan.baidu.com/s/1UoeCe23YvM9ciZEpGTt-mw)
 Extraction code:CNAH 
