@@ -280,6 +280,10 @@ x2 = Dropout(0.5)(x2)
 #               verbose=1,
 #               validation_data=(X_test, y_test))
 # model.save('./zangwen/m_repvgg40e2.h5')
+
+from GhostNet import GhostNet
+model = GhostNet((386,386,1),5).build(False)
+
 from keras.models import load_model
 from keras.utils import CustomObjectScope
 with CustomObjectScope({'SpatialPyramidPooling': SpatialPyramidPooling}):
