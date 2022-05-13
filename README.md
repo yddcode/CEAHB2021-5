@@ -16,10 +16,9 @@ E:\压缩包\SVHN 数据集路径，只需加载train_32x32.mat及text_32x32.mat
 
 num_classes = 5
 
-# input image dimensions
 img_rows, img_cols = 386, 386
 
-# the data, split between train and test sets
+
 def read_image(img_name):
     im = Image.open(img_name).convert('L')
     im = im.resize((386, 386))
@@ -27,7 +26,7 @@ def read_image(img_name):
     # print(data.shape)
     return data
 
-# D:\vscode\vscodework\zangwen
+// D:\vscode\vscodework\zangwen
 images = []
 for fn in os.listdir('E:/guji_resizedata510'):
     if fn.endswith('.jpg'):
@@ -40,7 +39,7 @@ print (X.shape)
 y = np.loadtxt('E:/gujilabel.txt')
 print (y.shape)
 
-# model = keras.models.Model(inputs=input2, outputs=out)
+// model = keras.models.Model(inputs=input2, outputs=out)
 model = csp_densenet(input_shape=(386,386,1))
 model.summary()
 
@@ -48,8 +47,7 @@ model.compile(loss=keras.losses.categorical_crossentropy,
               optimizer=keras.optimizers.Adam(lr=0.0001, beta_1=0.9, beta_2=0.9, epsilon=1e-08, amsgrad=True),
               metrics=['accuracy'])
 
-# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.5, random_state= 3)
-# X_train, y_train = X_train[:5000], y_train[:5000]
+// X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.5, random_state= 3)
 from sklearn.model_selection import KFold
 
 n_folds = 5
