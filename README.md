@@ -2,13 +2,17 @@
 
 替换模型方法：以CSPDenseNet.py为例
 
-把CSPDenseNet.py和mu_rep.py放在同级目录下，把msvgg模型代码注释掉，添加下面两行代码：
+把CSPDenseNet.py和mu_rep.py/MSVGG.py放在同级目录下，把本模型代码注释掉，添加下面两行代码：
 ```
 from CSPDenseNet import csp_densenet
 
 model = csp_densenet(input_shape=(386,386,1))
 ```
 E:\压缩包\SVHN 数据集路径，只需加载train_32x32.mat及text_32x32.mat
+
+FashionMNIST   E:\zhudawei_pycharm\vit-pytorch-main\Fashion_MNIST\FashionMNIST\raw
+
+MNIST    E:\zhudawei_pycharm\GhostNet-MNIST-master\data\MNIST\raw
 
 本项目中model中有对应加载及训练代码
 
