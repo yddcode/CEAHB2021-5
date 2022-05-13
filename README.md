@@ -14,6 +14,18 @@ FashionMNIST   E:\zhudawei_pycharm\vit-pytorch-main\Fashion_MNIST\FashionMNIST\r
 
 MNIST    E:\zhudawei_pycharm\GhostNet-MNIST-master\data\MNIST\raw
 
+https://github.com/joewellhe/textCaps/tree/master/textCaps
+
+https://github.com/vinojjayasundara/textcaps
+
+https://github.com/hypnopump/SimpleNet-Keras/blob/master/simplenet.py
+
+https://github.com/philipperemy/tensorflow-maxout
+
+https://github.com/paniabhisek/maxout
+
+# https://github.com/DrMahdiRezaei/Deep-CAPTCHA
+
 本项目中model中有对应加载及训练代码
 
 5折交叉验证：
@@ -99,7 +111,7 @@ for train_index, test_index in kfold.split(X):
     scores.append(acc)
 print("5折交叉验证结果：", scores)    
 ```
-# https://github.com/hypnopump/SimpleNet-Keras/blob/master/simplenet.py
+# 
 
 中国少数民族古籍文档文种分类 是 中国少数民族古籍数字化平台 的重要组成部分，该平台主要包括文档文种分类、图像处理、版面分析、内容识别及版面重建等。
 
