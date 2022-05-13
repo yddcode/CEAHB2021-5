@@ -1,5 +1,13 @@
 # CEAHB2021-5 database
 
+替换模型方法：以CSPDenseNet.py为例
+
+把CSPDenseNet.py和mu_rep.py放在同级目录下，把msvgg模型代码注释掉，添加下面两行代码：
+
+from CSPDenseNet import csp_densenet
+
+model = csp_densenet(input_shape=(386,386,1))
+
 中国少数民族古籍文档文种分类 是 中国少数民族古籍数字化平台 的重要组成部分，该平台主要包括文档文种分类、图像处理、版面分析、内容识别及版面重建等。
 
 Chinese ancient books script identification with deep convolutional neural networks via multi-branch and spatial pyramid pooling
