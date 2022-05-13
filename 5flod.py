@@ -1,3 +1,4 @@
+# 5折交叉验证  和 batch边训练边加载数据 
 from keras.layers import Dense, Dropout, Flatten
 from keras.layers import Conv2D, MaxPooling2D
 import time
