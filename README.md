@@ -1,6 +1,5 @@
 # CEAHB2021-5 database
 
-```
 https://paperswithcode.com/sota/image-classification-on-mnist
 https://paperswithcode.com/methods/category/convolutional-neural-networks
 https://github.com/search?q=mixnet+keras
@@ -8,9 +7,8 @@ https://github.com/search?q=shuffle+keras
 https://github.com/search?q=darknet+keras
 https://github.com/shyhyawJou/ExquisiteNetV2/blob/main/train.py
 https://github.com/leondgarse/Keras_efficientnet_v2
-```
 
-替换模型方法：以CSPDenseNet.py为例
+替换模型方法：以cspnet.py为例
 
 把cspnet.py和mu_rep.py/MSVGG.py放在同级目录下，把本模型代码注释掉，添加下面两行代码：
 ```
@@ -46,9 +44,7 @@ tensorflow-gpu==1.14/1.15
 5折交叉验证：
 ```
 num_classes = 5
-
 img_rows, img_cols = 386, 386
-
 
 def read_image(img_name):
     im = Image.open(img_name).convert('L')
@@ -122,9 +118,9 @@ for train_index, test_index in kfold.split(X):
 
     acc = model.evaluate(X_test, y_test, verbose=0)
 
-    # print('> %.5f' % (acc * 100.0))
+    # print(' %.3f' % (acc * 100.0))
     scores.append(acc)
-print("5折交叉验证结果：", scores)    
+print("5折交叉验证结果：", scores, np.mean(scores))    
 ```
 
 中国少数民族古籍文档文种识别 是 中国少数民族古籍数字化平台 的重要组成部分，该平台主要包括文档文种识别、图像处理、版面分析、内容识别及版面重建等。 该平台进展情况->
