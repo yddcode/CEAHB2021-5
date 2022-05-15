@@ -1,11 +1,17 @@
 # CEAHB2021-5 database
 
 https://paperswithcode.com/sota/image-classification-on-mnist
+
 https://paperswithcode.com/methods/category/convolutional-neural-networks
+
 https://github.com/search?q=mixnet+keras
+
 https://github.com/search?q=shuffle+keras
+
 https://github.com/search?q=darknet+keras
+
 https://github.com/shyhyawJou/ExquisiteNetV2/blob/main/train.py
+
 https://github.com/leondgarse/Keras_efficientnet_v2
 
 替换模型方法：以cspnet.py为例
@@ -62,7 +68,6 @@ for fn in os.listdir('E:/guji_resizedata510'):
 print('load success!')
 X = np.array(images)
 print (X.shape)
-
 y = np.loadtxt('E:/gujilabel.txt')
 print (y.shape)
 
@@ -115,9 +120,7 @@ for train_index, test_index in kfold.split(X):
                 verbose=1,
                 validation_data=(X_test, y_test))
     # model.save('./zangwen/m_repvgg_5fold.h5')
-
     acc = model.evaluate(X_test, y_test, verbose=0)
-
     # print(' %.3f' % (acc * 100.0))
     scores.append(acc)
 print("5折交叉验证结果：", scores, np.mean(scores))    
