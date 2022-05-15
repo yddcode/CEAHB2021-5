@@ -282,26 +282,27 @@ print (y.shape)
 
 # 建立一个数据迭代器
 def GET_DATASET_SHUFFLE(X_samples, y_samples, batch_size, train_set = True):
-    random.shuffle(X_samples)
-        
-    batch_num = int(len(X_samples) / batch_size)
-    max_len = batch_num * batch_size
-    X_samples = np.array(X_samples[:max_len])
-    # y_samples = get_img_label(X_samples)
-    y_samples = np.array(y_samples[:max_len])
-    print(X_samples.shape)
-     
-    X_batches = np.split(X_samples, batch_num)
-    y_batches = np.split(y_samples, batch_num)
+    while True:
+        random.shuffle(X_samples)
 
-    for i in range(len(X_batches)):
-        # if train_set:
-        x = np.array(list(map(load_batch_image, X_batches[i], [True for _ in range(batch_size)])))
-        # else:
-        #     x = np.array(list(map(load_batch_image, X_batches[i], [False for _ in range(batch_size)])))
-        #print(x.shape)
-        y = np.array(y_batches[i])
-        yield x,y    
+        batch_num = int(len(X_samples) / batch_size)
+        max_len = batch_num * batch_size
+        X_samples = np.array(X_samples[:max_len])
+        # y_samples = get_img_label(X_samples)
+        y_samples = np.array(y_samples[:max_len])
+        print(X_samples.shape)
+
+        X_batches = np.split(X_samples, batch_num)
+        y_batches = np.split(y_samples, batch_num)
+
+        for i in range(len(X_batches)):
+            # if train_set:
+            x = np.array(list(map(load_batch_image, X_batches[i], [True for _ in range(batch_size)])))
+            # else:
+            #     x = np.array(list(map(load_batch_image, X_batches[i], [False for _ in range(batch_size)])))
+            #print(x.shape)
+            y = np.array(y_batches[i])
+            yield x,y    
 
 # 读取图片
 def load_batch_image(img_path, train_set = True, target_size=(386, 386)):
