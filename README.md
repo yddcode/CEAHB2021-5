@@ -1,21 +1,23 @@
 # CEAHB2021-5 database
 
+```
 https://paperswithcode.com/sota/image-classification-on-mnist
-
 https://paperswithcode.com/methods/category/convolutional-neural-networks
-
+https://github.com/search?q=mixnet+keras
+https://github.com/search?q=shuffle+keras
+https://github.com/search?q=darknet+keras
 https://github.com/shyhyawJou/ExquisiteNetV2/blob/main/train.py
+https://github.com/leondgarse/Keras_efficientnet_v2
+```
 
 替换模型方法：以CSPDenseNet.py为例
 
 把cspnet.py和mu_rep.py/MSVGG.py放在同级目录下，把本模型代码注释掉，添加下面两行代码：
 ```
 # 文件名不要和类名或函数名一致，会报错
-
-cspnet->文件名  csp_densenet->函数名
+# cspnet->文件名  csp_densenet->函数名
 
 from cspnet import csp_densenet
-
 model = csp_densenet(input_shape=(386,386,1))
 ```
 E:\压缩包\SVHN 数据集路径，只需加载train_32x32.mat及text_32x32.mat
@@ -35,9 +37,12 @@ https://github.com/philipperemy/tensorflow-maxout
 https://github.com/paniabhisek/maxout
 
 # https://github.com/DrMahdiRezaei/Deep-CAPTCHA
-
+```
 本项目中model中有对应加载及训练代码
-
+环境配置：
+keras==2.2.4
+tensorflow-gpu==1.14/1.15
+```
 5折交叉验证：
 ```
 num_classes = 5
@@ -121,9 +126,9 @@ for train_index, test_index in kfold.split(X):
     scores.append(acc)
 print("5折交叉验证结果：", scores)    
 ```
-# 
 
-中国少数民族古籍文档文种分类 是 中国少数民族古籍数字化平台 的重要组成部分，该平台主要包括文档文种分类、图像处理、版面分析、内容识别及版面重建等。
+中国少数民族古籍文档文种识别 是 中国少数民族古籍数字化平台 的重要组成部分，该平台主要包括文档文种识别、图像处理、版面分析、内容识别及版面重建等。 该平台进展情况->
+https://blog.csdn.net/qq_35200351/article/details/116127962
 
 Chinese ancient books script identification with deep convolutional neural networks via multi-branch and spatial pyramid pooling
 
