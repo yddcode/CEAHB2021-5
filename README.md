@@ -1,10 +1,20 @@
 # CEAHB2021-5 database
 
+https://paperswithcode.com/sota/image-classification-on-mnist
+
+https://paperswithcode.com/methods/category/convolutional-neural-networks
+
+https://github.com/shyhyawJou/ExquisiteNetV2/blob/main/train.py
+
 替换模型方法：以CSPDenseNet.py为例
 
-把CSPDenseNet.py和mu_rep.py/MSVGG.py放在同级目录下，把本模型代码注释掉，添加下面两行代码：
+把cspnet.py和mu_rep.py/MSVGG.py放在同级目录下，把本模型代码注释掉，添加下面两行代码：
 ```
-from CSPDenseNet import csp_densenet
+# 文件名不要和类名或函数名一致，会报错
+
+cspnet->文件名  csp_densenet->函数名
+
+from cspnet import csp_densenet
 
 model = csp_densenet(input_shape=(386,386,1))
 ```
@@ -95,7 +105,7 @@ for train_index, test_index in kfold.split(X):
     epochs = 1
 
     # 更换基础模型架构
-    # from GhostNet import GhostNet
+    # from  import GhostNet
     # model = GhostNet((386,386,1),5).build(False)
 
     H = model.fit(X_train, y_train,
@@ -131,4 +141,4 @@ Extraction code:CNAH
 Google Drive ![link] (https://drive.google.com/file/d/1zoJi466Dw_80Z8HL1HY4buDuppyOROgm/view?usp=sharing)
 or (https://drive.google.com/file/d/11Rcn5ibQCEnTvAeRG8Xj6rv4e-CCf889/view?usp=sharing, https://drive.google.com/file/d/1zoJi466Dw_80Z8HL1HY4buDuppyOROgm/view?usp=sharing)
 
-If you use the dataset, please cite this paper: (under review)
+If you use the dataset, please cite this paper: (under review PAA)
