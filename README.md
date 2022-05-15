@@ -71,14 +71,6 @@ print (X.shape)
 y = np.loadtxt('E:/gujilabel.txt')
 print (y.shape)
 
-# model = keras.models.Model(inputs=input2, outputs=out)
-model = csp_densenet(input_shape=(386,386,1))
-model.summary()
-
-model.compile(loss=keras.losses.categorical_crossentropy,
-              optimizer=keras.optimizers.Adam(lr=0.0001, beta_1=0.9, beta_2=0.9, epsilon=1e-08, amsgrad=True),
-              metrics=['accuracy'])
-
 # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.5, random_state= 3)
 from sklearn.model_selection import KFold
 
@@ -113,6 +105,13 @@ for train_index, test_index in kfold.split(X):
     # 更换基础模型架构
     # from  import GhostNet
     # model = GhostNet((386,386,1),5).build(False)
+    
+    model = csp_densenet(input_shape=(386,386,1))
+    model.summary()
+
+    model.compile(loss=keras.losses.categorical_crossentropy,
+                  optimizer=keras.optimizers.Adam(lr=0.0001, beta_1=0.9, beta_2=0.9, epsilon=1e-08, amsgrad=True),
+                  metrics=['accuracy'])
 
     H = model.fit(X_train, y_train,
                 batch_size=batch_size,
