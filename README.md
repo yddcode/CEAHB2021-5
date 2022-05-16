@@ -14,6 +14,15 @@ https://github.com/shyhyawJou/ExquisiteNetV2/blob/main/train.py
 
 https://github.com/leondgarse/Keras_efficientnet_v2
 
+```
+# 加载模型权重
+from keras.models import load_model
+from keras.utils import CustomObjectScope
+with CustomObjectScope( {'SpatialPyramidPooling': SpatialPyramidPooling} ):
+    model = load_model('m_repvgg40e2.h5', compile=False)
+model.summary()
+```
+
 替换模型方法：以cspnet.py为例
 
 把cspnet.py和mu_rep.py/MSVGG.py放在同级目录下，把本模型代码注释掉，添加下面两行代码：
