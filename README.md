@@ -15,9 +15,10 @@ https://github.com/shyhyawJou/ExquisiteNetV2/blob/main/train.py
 https://github.com/leondgarse/Keras_efficientnet_v2
 
 ```
-# 加载模型权重
+# 加载模型权重 环境配置需要相同
 from keras.models import load_model
 from keras.utils import CustomObjectScope
+
 with CustomObjectScope( {'SpatialPyramidPooling': SpatialPyramidPooling} ):
     model = load_model('m_repvgg40e2.h5', compile=False)
 model.summary()
@@ -37,7 +38,7 @@ E:\压缩包\SVHN 数据集路径，只需加载train_32x32.mat及text_32x32.mat
 
 FashionMNIST   E:\zhudawei_pycharm\vit-pytorch-main\Fashion_MNIST\FashionMNIST\raw
 
-MNIST    E:\zhudawei_pycharm\GhostNet-MNIST-master\data\MNIST\raw
+MNIST    E:\zhudawei_pycharm\GhostNet-MNIST-master\data\MNIST\raw  MLe2e CVSI2015
 
 https://github.com/joewellhe/textCaps/tree/master/textCaps
 
