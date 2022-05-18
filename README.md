@@ -1,8 +1,8 @@
 # CEAHB2021-5 database
 
-https://paperswithcode.com/sota/image-classification-on-mnist
+https://paperswithcode.com/sota/image-classification-on-mnist  CNN on MNIST
 
-https://paperswithcode.com/methods/category/convolutional-neural-networks
+https://paperswithcode.com/methods/category/convolutional-neural-networks  CNN list
 
 https://github.com/search?q=mixnet+keras
 
@@ -10,9 +10,13 @@ https://github.com/search?q=shuffle+keras
 
 https://github.com/search?q=darknet+keras
 
-https://github.com/shyhyawJou/ExquisiteNetV2/blob/main/train.py
-
 https://github.com/leondgarse/Keras_efficientnet_v2
+
+https://github.com/kaparoo/Efficient-CapsNet
+
+https://github.com/shyhyawJou/ExquisiteNetV2
+
+https://github.com/pranavphoenix/WaveMix
 
 ```
 # 加载模型权重 环境配置需要相同
