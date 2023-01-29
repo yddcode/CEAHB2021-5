@@ -152,10 +152,15 @@ E.g.:
 
 The dataset was published at Baidu Drive and Google Drive.
 
-Baidu Drive ![link] (https://pan.baidu.com/s/1UoeCe23YvM9ciZEpGTt-mw)
+Baidu Drive ![link] (https://pan.baidu.com/s/19mKhhH2klRfxnjXqfKcrog?pwd=CNAH )
 Extraction code:CNAH 
+
 
 Google Drive ![link] (https://drive.google.com/file/d/1zoJi466Dw_80Z8HL1HY4buDuppyOROgm/view?usp=sharing)
 or (https://drive.google.com/file/d/11Rcn5ibQCEnTvAeRG8Xj6rv4e-CCf889/view?usp=sharing, https://drive.google.com/file/d/1zoJi466Dw_80Z8HL1HY4buDuppyOROgm/view?usp=sharing)
 
-If you use the dataset, please cite this paper: (under review PAA)
+
+If you use the dataset, please cite this paper: (Accepted 01.25.2023 Pattern Analysis and Applications)
+
+
+Chinese ancient books script identification with deep CNNs via multi-branch and SPP.
